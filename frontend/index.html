@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Detector</title>
+    <!-- Replace this line: -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- With this: -->
+    <link href="css/styles.tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-[#1E1E2E] text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                AI Content Detector
+            </h1>
+            <p class="text-gray-400">Upload images or videos to detect AI-generated content</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="max-w-2xl mx-auto">
+            <div id="dropZone" class="border-2 border-dashed border-cyan-400 rounded-lg p-8 text-center hover:border-purple-600 transition-colors cursor-pointer">
+                <div class="space-y-4">
+                    <svg class="mx-auto h-12 w-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                    </svg>
+                    <div class="text-lg">
+                        Drag and drop files here or <span class="text-cyan-400">browse</span>
+                    </div>
+                    <input type="file" id="fileInput" class="hidden" accept="image/*,video/*" multiple>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div id="previewSection" class="mt-8 hidden">
+                <h2 class="text-xl font-semibold mb-4">Preview</h2>
+                <div id="previewContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="mt-8 hidden">
+                <h2 class="text-xl font-semibold mb-4">Results</h2>
+                <div id="resultsContainer" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

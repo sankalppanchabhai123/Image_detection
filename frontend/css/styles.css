@@ -1,0 +1,41 @@
+/* Custom animations and effects */
+.glow {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+                0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.result-card {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 46, 0.8);
+}
+
+/* Progress bar animation */
+@keyframes progress {
+    from { width: 0; }
+    to { width: var(--progress-width); }
+}
+
+.progress-bar {
+    animation: progress 1s ease-out forwards;
+}
+
+/* File upload hover effect */
+#dropZone.drag-over {
+    border-color: #00FFFF;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid rgba(0, 255, 255, 0.1);
+    border-top: 3px solid #00FFFF;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
